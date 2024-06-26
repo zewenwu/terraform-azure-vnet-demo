@@ -24,7 +24,7 @@ Each subnet is associated with a dedicated route table that routes traffic to th
 
 ### Service Endpoinsts
 
-You can optionally enable an S3 VPC endpoint to allow instances in private subnets to connect to S3 without going through the internet. This is useful for scenarios where you want to restrict access to S3 to only instances within the VPC.
+You can optionally enable service endpoints to allow instances in private subnets to connect to Azure services without going through the internet.
 
 ## How to use this module
 
@@ -59,7 +59,7 @@ module "vnet" {
 
 We use Terraform to deploy the solution architecture. The Terraform blueprints are located in the `live-sandbox` folder. **The Terraform blueprints are Terraform use-case specific files that references Terraform components.** For our use case, we are defining Terraform blueprints to deploy a Azure Virtual Network.
 
-Terraform components are located in the `terraform-components` folder. **The Terraform components are reusable Terraform code that can be used to deploy a specific Azure resource.** Terraform components not only deploys its specific AWS resource, but deploys them considering best practices regarding reusability, security, and scalability.
+Terraform components are located in the `terraform-components` folder. **The Terraform components are reusable Terraform code that can be used to deploy a specific Azure resource.** Terraform components not only deploys its specific Azure resource, but deploys them considering best practices regarding reusability, security, and scalability.
 
 For more info on Terraform, please refer to the [Terraform documentation](https://www.terraform.io/docs/language/index.html).
 
@@ -74,7 +74,7 @@ Please follow the below tutorials to deploy the solution architecture in the pre
 
 To set up Terraform with Azure Cloud account,
 
-**Step 1.** Create an Azure account. You need to have Contributor access an Azure subscription, which is specified by its subscription ID and tenant ID to use Terraform to deploy resources on AWS of the following format:
+**Step 1.** Create an Azure account. You need to have Contributor access an Azure subscription, which is specified by its subscription ID and tenant ID to use Terraform to deploy resources on Azure of the following format:
 
 ```bash
 subscription_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -104,7 +104,7 @@ cd live-sandbox
 terraform apply
 ```
 
-**Step 2.** Once you are happy with the resources that Terraform is going to deploy in your AWS account, confirm by typing `yes` in the Terminal.
+**Step 2.** Once you are happy with the resources that Terraform is going to deploy in your Azure account, confirm by typing `yes` in the Terminal.
 
 ## Pre-commit hooks
 
