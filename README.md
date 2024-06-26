@@ -105,3 +105,14 @@ terraform apply
 ```
 
 **Step 2.** Once you are happy with the resources that Terraform is going to deploy in your AWS account, confirm by typing `yes` in the Terminal.
+
+## Pre-commit hooks
+
+This repository includes a set of pre-commit hooks to ensure code quality and maintainability before committing changes. These hooks help catch common errors and enforce coding standards in Terraform.
+
+The set of hooks specified in `.pre-commit-config.yaml` and are summarized here:
+- [TFLint](https://github.com/terraform-linters/tflint)
+- [Trivy](https://aquasecurity.github.io/trivy/v0.45/getting-started/installation/)
+- [terraform-docs](https://github.com/terraform-docs/terraform-docs)
+
+Ensure all these Terraform tools are installed before contributing to this repository.
